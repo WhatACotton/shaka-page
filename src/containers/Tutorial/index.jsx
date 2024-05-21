@@ -13,7 +13,6 @@ class Tutorial extends React.PureComponent{
     }
 
     componentDidMount(){
-
         var manifestUri = this.props.manifestUrl;
         var licenseServer = this.props.licenseServer;
         
@@ -24,8 +23,6 @@ class Tutorial extends React.PureComponent{
 
         const ui = new shaka.ui.Overlay(player, videoContainer, video);
         const controls = ui.getControls();
-
-        console.log(Object.keys(shaka.ui));
 
         player.configure({
             drm: {
@@ -47,7 +44,6 @@ class Tutorial extends React.PureComponent{
     }
 
     render(){
-
         return(
             <div className="shadow-lg mx-auto max-w-full" ref={this.videoContainer} style={{"width": "800px"}}>
             <video id="video" ref={this.video} className="w-full h-full"
